@@ -1558,6 +1558,26 @@ namespace CodeMonkey.Utils {
         }
 
 
+
+        public static Vector3 GetClosestPointAlongAxis(Vector3 pointA, Vector3 testPoint, Vector3 axis) {
+            // Calculate vector and distance from robot to obstacle (hypotenuse)
+            Vector3 toPoint = testPoint - pointA;
+            float toPointDistance = toPoint.magnitude;
+
+            // Calculate theta (angle)
+            float theta = Vector3.Angle(axis, toPoint);
+
+            // Using CAH rule (cosine, adjacent, hypotenuse) to find the (adjacent) side length
+            float pointIntersectionDistance = Mathf.Cos(theta * Mathf.Deg2Rad) * toPointDistance;
+
+            // Travelling the calculated distance in the direction of the target
+            Vector3 intersectionPoint = pointA + axis * pointIntersectionDistance;
+
+            return intersectionPoint;
+        }
+
+
+
     }
 
 }
