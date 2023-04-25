@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.LWRP;
+//using UnityEngine.Experimental.Rendering.LWRP;
+using UnityEngine.Rendering.Universal;
 using TMPro;
 using CodeMonkey.Utils;
 
@@ -28,12 +29,12 @@ namespace CodeMonkey.InventorySystem {
 
         private Item item;
         private SpriteRenderer spriteRenderer;
-        private UnityEngine.Experimental.Rendering.Universal.Light2D light2D;
+        private UnityEngine.Rendering.Universal.Light2D light2D;
         private TextMeshPro textMeshPro;
 
         private void Awake() {
             spriteRenderer = GetComponent<SpriteRenderer>();
-            light2D = transform.Find("Light").GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>();
+            light2D = transform.Find("Light").GetComponent<UnityEngine.Rendering.Universal.Light2D>();
             textMeshPro = transform.Find("Text").GetComponent<TextMeshPro>();
         }
 
