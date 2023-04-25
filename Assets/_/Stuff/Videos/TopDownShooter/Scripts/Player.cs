@@ -1,4 +1,4 @@
-﻿/* 
+﻿/*
     ------------------- Code Monkey -------------------
 
     Thank you for downloading this package
@@ -9,12 +9,13 @@
                unitycodemonkey.com
     --------------------------------------------------
  */
- 
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.LWRP;
+//using UnityEngine.Experimental.Rendering.LWRP;
+using UnityEngine.Rendering.Universal;
 using CodeMonkey.Utils;
 using CodeMonkey.MonoBehaviours;
 
